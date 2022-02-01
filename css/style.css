@@ -1,0 +1,271 @@
+
+
+
+/* Виставляємо шрифти в селекторі * */
+*{
+    font-size: 'Roboto', sans-serif;
+}
+
+
+/* ==================================================================*/
+/* Верхня частина HEADER-у */
+
+    /* Ставимо позиціонування header в relative, щоб можна було спозиціонувати абсолютно дочірній клас subheader */
+header{
+    position: relative;
+}
+    /* Стилізуємо весь nav, виставляємо йому висоту і колір заднього фону */
+nav{
+    height: 50px;
+    background-color: #212121;
+}
+
+    /* Стилізуємо саме меню, виставляємо flex для батьківського елементу і вирівнюємо всі пункти меню, виставляємо границі й забираємо в пунктів кружки */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 70px;
+    margin: 0;
+    list-style: none;
+}
+
+    /* Стилізуємо самі пункти меню, ставимо колір, шрифт */
+.menu .menu_link{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+    /* Стилізуємо розділювачі між пунктами меню, ставимо товщину ліній і пунктирну лінію, а також відступи від пунктів меню вправо */
+.menu .menu_item{
+    border-right: 2px dotted #fff;
+    padding-right: 28px;
+}
+
+
+
+
+/* ============================================================================================================================== */
+/* Нижня частина HEADER */
+
+
+    /* Ставимо висоту ділянки і чорний колір заднього фону з прозорістю */
+.subheader{
+    position: absolute;                            /* ПОзиціонуємо абсолютно, щоб фонова картинка залізла під частину меню, як на макеті */
+    width: 100%;
+    height: 84px;
+    background-color: rgba(0, 0, 0, .6);        /* Чорний фон з прозорістю 0.6 */
+}
+
+    /* Логотипу додаємо max-width на випадок, якщо поставлять інший логотип, більший, то щоб він не вилазив за межі ділянки */
+.subheader .subheader_logo{
+    display: block;         /* Ставимо посиланню block, щоб можна було ставити відступи і вирівняти елемент */
+    max-width: 100%;        /* 100% від колонкиу */
+    margin-top: 16px;       /* Ставимо відступ зверху від логотипу до країів, щоб вирівняти логотип */
+}
+
+    /* Стилізуємо текст під логотипом, виставляємо йому прозорість, колір і розмір */
+.subheader .subheader_official{
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 6px;     /* Ставимо нижній відступ від тексту до краю ділянки */
+}
+
+
+    /*  Стилізуємо текст над номером телефону, ставимо йому відступ від верхнього краю*/
+.subheader .subheader_call{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;      /* Вирівнюємо текст по правому краю */
+    margin-top: 19px;       /* Відступ від верхнього краю */
+}
+
+    /*  Стилізємо номер телефону, забираємо в нього нижнє підкреслення*/
+.subheader .subheader_phone{
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;      /* Забираємо лінію під номером */
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400; 
+    text-align: right;          /* Вирівнюємо номер по правому краю */
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+
+    /* Стилізуємо нашу кнопку і текст всередині неї*/
+.subheader .subheader_btn{
+    margin-top: 19px;                                          /* Відступ від верхнього краю */                                       
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);         /* Тіні від кнопки */
+    border: none;
+    border-radius: 4px;                                       /* Додаємо закруглені кути */
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);        /* Колір кнпки */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    /* =================== */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+/* ============================================================================================================================================== */
+/* Перша секція  PROMO*/
+
+
+    /* Виставляємо мінімальну висоту і картинку заднього фону для секції */
+.promo{
+    min-height: 800px;
+    background: url('../img/first_screen1/background_first.jpg') center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+}
+
+    /* Стилізуємо зголовок секції h1 */
+.promo .promo_header{
+    margin: 0;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    /* Стилізуємо підзаголовок секції h2 */
+.promo .promo_subheader{
+    margin: 0;
+    margin-top: 22px;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    /* Стилізуємо текст під заголовками */
+.promo .promo_descr{
+    margin: 0;
+    margin-top: 23px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+    /* Стилізуємо кнопку і надпис всередині кнопки */
+.promo .promo_btn{
+    display: block;                        /* Встановлюємо block для того, щоб можна було вирівняти положення кнопки за допомогою відступів (за замовчування кнопка є inline) */
+    margin: 0 auto;                         /* Вирівнюємо нашу кнопку по-центр */
+    margin-top: 118px;                      /* Доставлємо відступ від тексту */
+    width: 259px;
+    height: 63px;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    /* ===================================================== */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+/* ============================================================================================================ */
+/* Стилізуємо секцію reasons з колонками і багатьма елементами */
+
+
+    /* Стилізуємо секцію, виставляємо мінімальну висоту і відступи */
+.reasons{
+    padding: 71px 0 65px 0;
+}
+
+    /* Стилізуємо верхній надпис в секції */
+.label{
+    margin: 0 auto;
+    height: 24px;
+    width: 112px;
+    padding: 5px 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+    /* Стилізуємо ще один надпис в секції */
+.title{
+    margin-bottom: 0;
+    margin-top: 38px;
+    color: #222222;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    /* Додаємо батьківскьому елементу наших колонок flex, щоб наші блоки з картинкою і текстом були флексом */
+.reasons .reasons_item{
+    display: flex;                  /* Ставимо флекс */
+    justify-content: center;        /* Вирівнюємо елементи по головній осі по-центру горизонтально */
+    align-items: center;            /* Вирівнюємо елементи по допоміжній осі по-центру вертикально */
+    margin-top: 35px;               /* Додаємо верхній відступ нашому кожному блоку з контентом */
+}
+
+    /* Додаємо батьківському елементу нашої картинки flex, щоб карнтинка також була флексом */
+.reasons .reasons_item .reasons_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;             /* Додаємо відступ справа від кружка з картинкою до тексту */
+    width: 110px;                   /* Ширина і висота кружка фіксована */
+    height: 110px;
+    background-color: #1eacc7;
+    border-radius: 100%;            /* Робимо власне кружечок з квадрата */
+}
+
+    /* Додаємо нашому блоку з текстом фіксовану ширину, щоб всі блоки з текстом були однакові */
+.reasons_descr{
+    width: 343px;
+}
+
+    /* Стилізуємо заголовки в кожному блоці з текстом */
+.reasons .reasons_item .reasons_maintext{
+    color: #1eacc7;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+    /* Стилізуємо сам текст в блоках */
+.reasons .reasons_item .reasons_text{
+    color: #202020;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+/* ============================================================================================================= */
+
+
+
+
+
+
+
+
+
+
+
